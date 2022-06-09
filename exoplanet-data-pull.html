@@ -1,0 +1,1336 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Explore NASA Exoplanet Data &#8212; (Exo)Planetary Atmosphere: the Impact of Stars and Solar Physics on Habitability and Life</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stellar Spectra Conversion" href="Stellar_spectra_conversion.html" />
+    <link rel="prev" title="(Exo)Planetary Atmosphere" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">(Exo)Planetary Atmosphere: the Impact of Stars and Solar Physics on Habitability and Life</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    (Exo)Planetary Atmosphere
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Processing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Explore NASA Exoplanet Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Stellar_spectra_conversion.html">
+   Stellar Spectra Conversion
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workshop Activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="day1sum.html">
+   3rd Eddy Symposium (Exo)Planetary Atmosphere Working Group Day 1 Summary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day2sum.html">
+   3rd Eddy Symposium (Exo)Planetary Atmosphere Working Group Day 2 Summary
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/exoplanet-data-pull.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/exoplanet-data-pull.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Explore NASA Exoplanet Data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="explore-nasa-exoplanet-data">
+<h1>Explore NASA Exoplanet Data<a class="headerlink" href="#explore-nasa-exoplanet-data" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>J. Colliander<br />
+2022-06-08 (at <a class="reference external" href="https://cpaess.ucar.edu/meetings/eddy-symposium-2022">3rd Jack Eddy Symposium</a>).</p>
+</div></blockquote>
+<p>The NASA Exoplanet Institute at Caltech hosts the <a class="reference external" href="https://exoplanetarchive.ipac.caltech.edu/">NASA Exoplanet Archive</a>. This resource provides the data on known exoplanets and mobilizes this data with an <a class="reference external" href="https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html">applied programming interface (API)</a>. The <a class="reference external" href="https://exoplanetarchive.ipac.caltech.edu/docs/API_queries.html">API Queries</a> page provides example calls.</p>
+<p>The goals for this short notebook:</p>
+<ul class="simple">
+<li><p>ingest NASA Exoplanet data via API</p></li>
+<li><p>transform data into Pandas Dataframe</p></li>
+<li><p>start exploration of data</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gather some tools</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line reads in the data (as rendered in CSV format) from the Archive&#39;s API into a Pandas dataframe.</span>
+<span class="c1"># Current version of this call generates an error message that I choose to ignore for now...</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps&amp;format=csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1078/2515563528.py:3: DtypeWarning: Columns (50,65,148,153,183,187,206,211,237,242) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(&#39;https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps&amp;format=csv&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dump the data into a table</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pl_name</th>
+      <th>pl_letter</th>
+      <th>hostname</th>
+      <th>hd_name</th>
+      <th>hip_name</th>
+      <th>tic_id</th>
+      <th>gaia_id</th>
+      <th>default_flag</th>
+      <th>pl_refname</th>
+      <th>sy_refname</th>
+      <th>...</th>
+      <th>sy_jmagerr1</th>
+      <th>sy_jmagerr2</th>
+      <th>sy_jmagstr</th>
+      <th>sy_hmag</th>
+      <th>sy_hmagerr1</th>
+      <th>sy_hmagerr2</th>
+      <th>sy_hmagstr</th>
+      <th>sy_kmag</th>
+      <th>sy_kmagerr1</th>
+      <th>sy_kmagerr2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kepler-11 c</td>
+      <td>c</td>
+      <td>Kepler-11</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TIC 169175503</td>
+      <td>Gaia DR2 2076960598545789824</td>
+      <td>0</td>
+      <td>&lt;a refstr=LISSAUER_ET_AL__2011 href=https://ui...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.024</td>
+      <td>-0.024</td>
+      <td>12.548&amp;plusmn;0.024</td>
+      <td>12.237</td>
+      <td>0.024</td>
+      <td>-0.024</td>
+      <td>12.237&amp;plusmn;0.024</td>
+      <td>12.180</td>
+      <td>0.020</td>
+      <td>-0.020</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kepler-11 f</td>
+      <td>f</td>
+      <td>Kepler-11</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TIC 169175503</td>
+      <td>Gaia DR2 2076960598545789824</td>
+      <td>0</td>
+      <td>&lt;a refstr=LISSAUER_ET_AL__2011 href=https://ui...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.024</td>
+      <td>-0.024</td>
+      <td>12.548&amp;plusmn;0.024</td>
+      <td>12.237</td>
+      <td>0.024</td>
+      <td>-0.024</td>
+      <td>12.237&amp;plusmn;0.024</td>
+      <td>12.180</td>
+      <td>0.020</td>
+      <td>-0.020</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OGLE-TR-10 b</td>
+      <td>b</td>
+      <td>OGLE-TR-10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TIC 130150682</td>
+      <td>Gaia DR2 4056443366649948160</td>
+      <td>1</td>
+      <td>&lt;a refstr=TORRES_ET_AL__2008 href=https://ui.a...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>13.692</td>
+      <td>13.314</td>
+      <td>0.121</td>
+      <td>-0.121</td>
+      <td>13.314&amp;plusmn;0.121</td>
+      <td>12.856</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>HD 210702 b</td>
+      <td>b</td>
+      <td>HD 210702</td>
+      <td>HD 210702</td>
+      <td>HIP 109577</td>
+      <td>TIC 456826468</td>
+      <td>Gaia DR2 1775004778213735168</td>
+      <td>0</td>
+      <td>&lt;a refstr=BOWLER_ET_AL__2010 href=https://ui.a...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.320</td>
+      <td>-0.320</td>
+      <td>4.508&amp;plusmn;0.320</td>
+      <td>3.995</td>
+      <td>0.226</td>
+      <td>-0.226</td>
+      <td>3.995&amp;plusmn;0.226</td>
+      <td>3.984</td>
+      <td>0.294</td>
+      <td>-0.294</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BD-08 2823 b</td>
+      <td>b</td>
+      <td>BD-08 2823</td>
+      <td>NaN</td>
+      <td>HIP 49067</td>
+      <td>TIC 33355302</td>
+      <td>Gaia DR2 3770419611540574080</td>
+      <td>0</td>
+      <td>&lt;a refstr=HEBRARD_ET_AL__2010 href=https://ui....</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.020</td>
+      <td>-0.020</td>
+      <td>7.96&amp;plusmn;0.02</td>
+      <td>7.498</td>
+      <td>0.047</td>
+      <td>-0.047</td>
+      <td>7.498&amp;plusmn;0.047</td>
+      <td>7.323</td>
+      <td>0.021</td>
+      <td>-0.021</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>32537</th>
+      <td>Kepler-381 c</td>
+      <td>c</td>
+      <td>Kepler-381</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TIC 164884235</td>
+      <td>Gaia DR2 2105835281411929728</td>
+      <td>0</td>
+      <td>&lt;a refstr=Q1_Q17_DR25_KOI_TABLE href=https://e...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.020</td>
+      <td>-0.020</td>
+      <td>9.721&amp;plusmn;0.020</td>
+      <td>9.547</td>
+      <td>0.018</td>
+      <td>-0.018</td>
+      <td>9.547&amp;plusmn;0.018</td>
+      <td>9.504</td>
+      <td>0.014</td>
+      <td>-0.014</td>
+    </tr>
+    <tr>
+      <th>32538</th>
+      <td>Kepler-1851 b</td>
+      <td>b</td>
+      <td>Kepler-1851</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TIC 352013607</td>
+      <td>Gaia DR2 2106494580370491392</td>
+      <td>1</td>
+      <td>&lt;a refstr=VALIZADEGAN_ET_AL__2021 href=https:/...</td>
+      <td>&lt;a refstr=STASSUN_ET_AL__2019 href=https://ui....</td>
+      <td>...</td>
+      <td>0.039</td>
+      <td>-0.039</td>
+      <td>14.524&amp;plusmn;0.039</td>
+      <td>14.141</td>
+      <td>0.043</td>
+      <td>-0.043</td>
+      <td>14.141&amp;plusmn;0.043</td>
+      <td>13.962</td>
+      <td>0.052</td>
+      <td>-0.052</td>
+    </tr>
+    <tr>
+      <th>32539</th>
+      <td>KMT-2017-BLG-2509L b</td>
+      <td>b</td>
+      <td>KMT-2017-BLG-2509L</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32540</th>
+      <td>OGLE-2017-BLG-1099L b</td>
+      <td>b</td>
+      <td>OGLE-2017-BLG-1099L</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32541</th>
+      <td>OGLE-2019-BLG-0299L b</td>
+      <td>b</td>
+      <td>OGLE-2019-BLG-0299L</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>&lt;a refstr=HAN_ET_AL__2021 href=https://ui.adsa...</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>32542 rows × 353 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>default_flag</th>
+      <th>disc_year</th>
+      <th>ra</th>
+      <th>dec</th>
+      <th>glon</th>
+      <th>glat</th>
+      <th>elon</th>
+      <th>elat</th>
+      <th>pl_orbper</th>
+      <th>pl_orbpererr1</th>
+      <th>...</th>
+      <th>sy_vmagerr2</th>
+      <th>sy_jmag</th>
+      <th>sy_jmagerr1</th>
+      <th>sy_jmagerr2</th>
+      <th>sy_hmag</th>
+      <th>sy_hmagerr1</th>
+      <th>sy_hmagerr2</th>
+      <th>sy_kmag</th>
+      <th>sy_kmagerr1</th>
+      <th>sy_kmagerr2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>32542.000000</td>
+      <td>2.973400e+04</td>
+      <td>2.849300e+04</td>
+      <td>...</td>
+      <td>32150.000000</td>
+      <td>32121.000000</td>
+      <td>32042.000000</td>
+      <td>32042.000000</td>
+      <td>32150.000000</td>
+      <td>32033.000000</td>
+      <td>32033.000000</td>
+      <td>32147.000000</td>
+      <td>31939.000000</td>
+      <td>31939.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.154723</td>
+      <td>2015.023539</td>
+      <td>270.195183</td>
+      <td>35.027630</td>
+      <td>97.241498</td>
+      <td>10.924461</td>
+      <td>284.021055</td>
+      <td>51.667717</td>
+      <td>1.422433e+04</td>
+      <td>1.668666e+04</td>
+      <td>...</td>
+      <td>-0.123051</td>
+      <td>12.264786</td>
+      <td>0.029814</td>
+      <td>-0.029576</td>
+      <td>11.884567</td>
+      <td>0.031071</td>
+      <td>-0.030926</td>
+      <td>11.799573</td>
+      <td>0.035792</td>
+      <td>-0.035218</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.361646</td>
+      <td>3.488738</td>
+      <td>61.797283</td>
+      <td>23.854925</td>
+      <td>63.911938</td>
+      <td>18.547882</td>
+      <td>65.967952</td>
+      <td>30.585650</td>
+      <td>2.332177e+06</td>
+      <td>2.784470e+06</td>
+      <td>...</td>
+      <td>0.188271</td>
+      <td>2.183902</td>
+      <td>0.132986</td>
+      <td>0.125557</td>
+      <td>2.196710</td>
+      <td>0.090701</td>
+      <td>0.093511</td>
+      <td>2.211296</td>
+      <td>0.189299</td>
+      <td>0.179215</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>1989.000000</td>
+      <td>0.185606</td>
+      <td>-88.121111</td>
+      <td>0.039250</td>
+      <td>-88.324780</td>
+      <td>0.444070</td>
+      <td>-87.163720</td>
+      <td>9.070629e-02</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>-12.270000</td>
+      <td>-2.095000</td>
+      <td>0.017000</td>
+      <td>-8.888000</td>
+      <td>-2.775000</td>
+      <td>0.014000</td>
+      <td>-8.990000</td>
+      <td>-3.044000</td>
+      <td>0.011000</td>
+      <td>-11.140000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.000000</td>
+      <td>2014.000000</td>
+      <td>284.828058</td>
+      <td>39.249173</td>
+      <td>73.449890</td>
+      <td>9.768330</td>
+      <td>296.602810</td>
+      <td>59.669900</td>
+      <td>4.662719e+00</td>
+      <td>9.340000e-06</td>
+      <td>...</td>
+      <td>-0.137000</td>
+      <td>11.590000</td>
+      <td>0.022000</td>
+      <td>-0.027000</td>
+      <td>11.222000</td>
+      <td>0.021000</td>
+      <td>-0.031000</td>
+      <td>11.155000</td>
+      <td>0.020000</td>
+      <td>-0.035000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.000000</td>
+      <td>2016.000000</td>
+      <td>290.248102</td>
+      <td>43.050038</td>
+      <td>77.007960</td>
+      <td>12.892960</td>
+      <td>305.428530</td>
+      <td>63.526280</td>
+      <td>1.099470e+01</td>
+      <td>4.125000e-05</td>
+      <td>...</td>
+      <td>-0.092000</td>
+      <td>12.871000</td>
+      <td>0.024000</td>
+      <td>-0.024000</td>
+      <td>12.496000</td>
+      <td>0.025000</td>
+      <td>-0.025000</td>
+      <td>12.407000</td>
+      <td>0.025000</td>
+      <td>-0.025000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.000000</td>
+      <td>2016.000000</td>
+      <td>294.614791</td>
+      <td>46.726681</td>
+      <td>80.843820</td>
+      <td>16.411820</td>
+      <td>313.243740</td>
+      <td>66.948120</td>
+      <td>2.750868e+01</td>
+      <td>2.028000e-04</td>
+      <td>...</td>
+      <td>-0.057000</td>
+      <td>13.719000</td>
+      <td>0.027000</td>
+      <td>-0.022000</td>
+      <td>13.300000</td>
+      <td>0.031000</td>
+      <td>-0.021000</td>
+      <td>13.234000</td>
+      <td>0.035000</td>
+      <td>-0.020000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.000000</td>
+      <td>2022.000000</td>
+      <td>359.974984</td>
+      <td>85.736533</td>
+      <td>359.996270</td>
+      <td>86.470460</td>
+      <td>359.901170</td>
+      <td>87.182910</td>
+      <td>4.020000e+08</td>
+      <td>4.700000e+08</td>
+      <td>...</td>
+      <td>-0.001000</td>
+      <td>25.340000</td>
+      <td>8.888000</td>
+      <td>-0.017000</td>
+      <td>33.830000</td>
+      <td>6.990000</td>
+      <td>-0.014000</td>
+      <td>35.330000</td>
+      <td>9.995000</td>
+      <td>-0.011000</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 264 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HostStars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+distinct+hostname+from+ps+order+by+hostname+asc&amp;format=json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HostStars</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hostname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11 Com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11 UMi</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>14 And</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14 Her</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16 Cyg B</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3770</th>
+      <td>tau Cet</td>
+    </tr>
+    <tr>
+      <th>3771</th>
+      <td>tau Gem</td>
+    </tr>
+    <tr>
+      <th>3772</th>
+      <td>ups And</td>
+    </tr>
+    <tr>
+      <th>3773</th>
+      <td>ups Leo</td>
+    </tr>
+    <tr>
+      <th>3774</th>
+      <td>xi Aql</td>
+    </tr>
+  </tbody>
+</table>
+<p>3775 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SinglePlanetarySolutions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars&amp;format=json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SinglePlanetarySolutions</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;pl_name&#39;, &#39;pl_letter&#39;, &#39;hostname&#39;, &#39;hd_name&#39;, &#39;hip_name&#39;, &#39;tic_id&#39;,
+       &#39;disc_pubdate&#39;, &#39;disc_year&#39;, &#39;discoverymethod&#39;, &#39;disc_locale&#39;,
+       ...
+       &#39;sy_pmstr&#39;, &#39;sy_pm_reflink&#39;, &#39;sy_pmra&#39;, &#39;sy_pmraerr1&#39;, &#39;sy_pmraerr2&#39;,
+       &#39;sy_pmrastr&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;htm20&#39;],
+      dtype=&#39;object&#39;, length=373)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SinglePlanetarySolutions</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>disc_year</th>
+      <th>ra</th>
+      <th>dec</th>
+      <th>glon</th>
+      <th>glat</th>
+      <th>elon</th>
+      <th>elat</th>
+      <th>pl_orbper</th>
+      <th>pl_orbpererr1</th>
+      <th>pl_orbpererr2</th>
+      <th>...</th>
+      <th>sy_pm</th>
+      <th>sy_pmerr1</th>
+      <th>sy_pmerr2</th>
+      <th>sy_pmra</th>
+      <th>sy_pmraerr1</th>
+      <th>sy_pmraerr2</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+      <th>htm20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>4.867000e+03</td>
+      <td>4.377000e+03</td>
+      <td>4.377000e+03</td>
+      <td>...</td>
+      <td>4887.000000</td>
+      <td>4884.000000</td>
+      <td>4870.000000</td>
+      <td>4887.000000</td>
+      <td>4884.000000</td>
+      <td>4870.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5035.000000</td>
+      <td>5.035000e+03</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2015.442701</td>
+      <td>240.958811</td>
+      <td>21.706373</td>
+      <td>127.938011</td>
+      <td>7.009003</td>
+      <td>251.494434</td>
+      <td>33.091310</td>
+      <td>8.645106e+04</td>
+      <td>1.085887e+05</td>
+      <td>-2.402073e+04</td>
+      <td>...</td>
+      <td>100.789773</td>
+      <td>0.173303</td>
+      <td>-0.171665</td>
+      <td>10.943209</td>
+      <td>0.175484</td>
+      <td>-0.173328</td>
+      <td>0.120170</td>
+      <td>-0.362206</td>
+      <td>0.341133</td>
+      <td>4.710252e+07</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>4.202233</td>
+      <td>88.144619</td>
+      <td>34.059262</td>
+      <td>92.047449</td>
+      <td>27.863722</td>
+      <td>92.571857</td>
+      <td>42.099059</td>
+      <td>5.764398e+06</td>
+      <td>7.104319e+06</td>
+      <td>1.512570e+06</td>
+      <td>...</td>
+      <td>358.830489</td>
+      <td>0.644031</td>
+      <td>0.643132</td>
+      <td>289.224983</td>
+      <td>0.646237</td>
+      <td>0.643208</td>
+      <td>0.443836</td>
+      <td>0.517565</td>
+      <td>0.522758</td>
+      <td>1.267325e+09</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1989.000000</td>
+      <td>0.185606</td>
+      <td>-88.121111</td>
+      <td>0.039250</td>
+      <td>-88.324780</td>
+      <td>0.444070</td>
+      <td>-87.163720</td>
+      <td>9.070629e-02</td>
+      <td>0.000000e+00</td>
+      <td>-1.000000e+08</td>
+      <td>...</td>
+      <td>0.158639</td>
+      <td>0.017492</td>
+      <td>-8.000000</td>
+      <td>-3781.310000</td>
+      <td>0.014895</td>
+      <td>-8.000000</td>
+      <td>-0.999390</td>
+      <td>-0.999976</td>
+      <td>-0.999462</td>
+      <td>-2.145840e+09</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2014.000000</td>
+      <td>192.580917</td>
+      <td>-2.105242</td>
+      <td>73.927970</td>
+      <td>3.819520</td>
+      <td>201.511990</td>
+      <td>-2.568270</td>
+      <td>4.467694e+00</td>
+      <td>1.600000e-05</td>
+      <td>-1.428000e-03</td>
+      <td>...</td>
+      <td>7.760034</td>
+      <td>0.039905</td>
+      <td>-0.073743</td>
+      <td>-8.869035</td>
+      <td>0.039050</td>
+      <td>-0.078768</td>
+      <td>0.022936</td>
+      <td>-0.692006</td>
+      <td>-0.036735</td>
+      <td>-1.035475e+09</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2016.000000</td>
+      <td>286.999476</td>
+      <td>40.548388</td>
+      <td>79.068480</td>
+      <td>12.116360</td>
+      <td>300.520040</td>
+      <td>60.343940</td>
+      <td>1.155103e+01</td>
+      <td>1.000000e-04</td>
+      <td>-1.000000e-04</td>
+      <td>...</td>
+      <td>16.588369</td>
+      <td>0.051459</td>
+      <td>-0.051407</td>
+      <td>-1.137820</td>
+      <td>0.052132</td>
+      <td>-0.051896</td>
+      <td>0.236552</td>
+      <td>-0.628725</td>
+      <td>0.650090</td>
+      <td>4.186393e+06</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2018.000000</td>
+      <td>293.822755</td>
+      <td>45.614334</td>
+      <td>189.098825</td>
+      <td>17.292040</td>
+      <td>311.618960</td>
+      <td>65.687930</td>
+      <td>3.946718e+01</td>
+      <td>1.431000e-03</td>
+      <td>-1.600000e-05</td>
+      <td>...</td>
+      <td>51.172173</td>
+      <td>0.074230</td>
+      <td>-0.039860</td>
+      <td>6.143395</td>
+      <td>0.079129</td>
+      <td>-0.038939</td>
+      <td>0.310958</td>
+      <td>-0.096003</td>
+      <td>0.714648</td>
+      <td>1.201603e+09</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2022.000000</td>
+      <td>359.974984</td>
+      <td>85.736533</td>
+      <td>359.996270</td>
+      <td>86.470460</td>
+      <td>359.901170</td>
+      <td>87.182910</td>
+      <td>4.020000e+08</td>
+      <td>4.700000e+08</td>
+      <td>-0.000000e+00</td>
+      <td>...</td>
+      <td>8644.904613</td>
+      <td>8.000000</td>
+      <td>-0.017492</td>
+      <td>6767.260000</td>
+      <td>8.000000</td>
+      <td>-0.014895</td>
+      <td>0.997391</td>
+      <td>0.998079</td>
+      <td>0.997233</td>
+      <td>2.146307e+09</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 239 columns</p>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">(Exo)Planetary Atmosphere</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Stellar_spectra_conversion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Stellar Spectra Conversion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By ???<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
